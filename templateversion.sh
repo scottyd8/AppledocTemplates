@@ -1,4 +1,4 @@
 #!/bin/bash
 #This is used for other programs to ensure we are using the correct
 #version of the Worldpay Appledoc template files.
-echo "1.0"
+echo 1
