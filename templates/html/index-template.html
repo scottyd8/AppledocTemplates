@@ -59,11 +59,11 @@
 
 							<ul>
 								{{#docs}}
-								<li><a class="joe" href="{{href}}">{{title}}</a></li>
+								<li><a class="fname" href="{{href}}">{{title}}</a></li>
 								{{/docs}}
 							</ul>
 							<script> // strip any leading ordering elements in the filename like 1. or 2_
-								var items = document.querySelectorAll('a.joe');
+								var items = document.querySelectorAll('a.fname');
 								var i;
 								for (i=0; i < items.length; i++){
 									origStr = items[i].innerHTML;									
