@@ -40,8 +40,14 @@
 				<main role="main">
 					<img src="../../img/worldpaylogo.png" alt="Worldpay Logo"  align="right" style="margin:20px 0px 0px 0px" >
 					<br/>
-					
-					<h1 class="title" style="color:red; text-align:center; font-weight: bold; font-size: 150%;"><script>document.write('{{page.title}}'.replace('Document',''));</script></h1>
+
+					<h1 id="adjustme" class="title" style="color:red; text-align:center; font-weight: bold; font-size: 150%;">{{page.title}}</h1>
+					<script>
+					var re = /^[0-9]+[. _]*/; // Regex to remove any leading numbers followed by . sp or _
+					var origStr = document.getElementById("adjustme").innerHTML;
+					var newStr = origStr.replace('Document', '').replace(re,'');
+					document.getElementById("adjustme").innerHTML = newStr;
+					</script>
 
 					{{#object.comment}}{{#longDescription}}{{>GBCommentComponentsList}}{{/longDescription}}{{/object.comment}}
 
